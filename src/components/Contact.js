@@ -22,14 +22,14 @@ export default function Contact() {
 
         emailjs
             .send(
-                "service_lfzkoic", // Reemplaza con tu Service ID de EmailJS
-                "template_3clalic", // Reemplaza con tu Template ID de EmailJS
+                process.env.NEXT_PUBLIC_SERVICE_ID, // Service ID
+                process.env.NEXT_PUBLIC_TEMPLATE_ID, // Template ID
                 {
                     from_name: form.name,
                     from_email: form.email,
                     message: form.message,
                 },
-                "ImbOu0dPH6YNZ0kTH" // Reemplaza con tu Public Key de EmailJS
+                process.env.NEXT_PUBLIC_PUBLIC_KEY // Public Key
             )
             .then(
                 () => {
