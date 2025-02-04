@@ -10,7 +10,8 @@ export default {
       colors: {
         background: "#1B1F22", // Fondo principal
         primary: "#6446C1",   // Color principal
-        secondary: "#AF78B3", // Color secundario
+        secondary:"#C7C8CC", // Color secundario
+        control: "#AF78B3", // Color secundario
         highlight: "#7C69EB", // Color para hover
         text: "#FCFEFF",      // Color del texto
         dark: "#252728",      // Oscuro adicional

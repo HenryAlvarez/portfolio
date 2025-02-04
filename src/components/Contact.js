@@ -4,20 +4,20 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
-    const [form, setForm] = useState({
-        name: "",
-        email: "",
-        message: "",
+    const [formulario, setFormulario] = useState({
+        nombre: "",
+        correo: "",
+        mensaje: "",
     });
 
-    const [isSent, setIsSent] = useState(false);
+    const [enviado, setEnviado] = useState(false);
 
-    const handleChange = (e) => {
+    const manejarCambio = (e) => {
         const { name, value } = e.target;
-        setForm({ ...form, [name]: value });
+        setFormulario({ ...formulario, [name]: value });
     };
 
-    const handleSubmit = (e) => {
+    const manejarEnvio = (e) => {
         e.preventDefault();
 
         emailjs
@@ -25,16 +25,16 @@ export default function Contact() {
                 process.env.NEXT_PUBLIC_SERVICE_ID, // Service ID
                 process.env.NEXT_PUBLIC_TEMPLATE_ID, // Template ID
                 {
-                    from_name: form.name,
-                    from_email: form.email,
-                    message: form.message,
+                    from_name: formulario.nombre,
+                    from_email: formulario.correo,
+                    message: formulario.mensaje,
                 },
                 process.env.NEXT_PUBLIC_PUBLIC_KEY // Public Key
             )
             .then(
                 () => {
-                    setIsSent(true);
-                    setForm({ name: "", email: "", message: "" });
+                    setEnviado(true);
+                    setFormulario({ nombre: "", correo: "", mensaje: "" });
                 },
                 (error) => {
                     console.error("Error al enviar el formulario: ", error);
@@ -44,88 +44,83 @@ export default function Contact() {
 
     return (
         <section
-            id="contact"
+            id="contacto"
             className="relative min-h-screen bg-background text-text flex flex-col items-center justify-center px-6 lg:px-20 py-16 overflow-hidden"
         >
             {/* Figuras decorativas */}
             <div className="absolute top-4 left-8 w-10 h-10 bg-highlight rounded-full"></div>
-            <div className="absolute bottom-8 left-16 w-8 h-8 bg-secondary rotate-45"></div>
-            <div className="absolute bottom-4 right-8 w-16 h-16 bg-highlight rounded-full"></div>
-            <div className="absolute -top-16 right-20">
-                <img
-                    src="/rocket.svg" // Reemplaza con la ruta de tu imagen del cohete
-                    alt="Rocket"
-                    className="w-32 h-32"
-                />
-            </div>
+            <div className="absolute bottom-8 left-16 w-8 h-8 bg-control rotate-45"></div>
+            <div className="absolute bottom-4 right-8 w-16 h-16 bg-control rounded-full"></div>
 
             {/* Encabezado */}
             <div className="text-center mb-12">
                 <h2 className="text-3xl lg:text-4xl font-bold">
-                    Contact <span className="text-highlight">Me</span>
+                    Contáctame <span className="text-highlight texto-gradiente">Aquí</span>
                 </h2>
-                <p className="text-secondary mt-4 lg:text-lg">Get in touch with me.</p>
+                <p className="text-secondary mt-4 lg:text-lg">
+                    Envíame un mensaje y te responderé lo antes posible.
+                </p>
             </div>
 
             {/* Formulario */}
             <form
-                onSubmit={handleSubmit}
+                onSubmit={manejarEnvio}
                 className="bg-dark p-8 rounded-lg shadow-lg w-full max-w-lg space-y-6"
             >
                 <div>
-                    <label htmlFor="name" className="block text-sm font-semibold mb-2">
-                        Name
+                    <label htmlFor="nombre" className="block text-sm font-semibold mb-2">
+                        Nombre
                     </label>
                     <input
                         type="text"
-                        id="name"
-                        name="name"
-                        value={form.name}
-                        onChange={handleChange}
-                        placeholder="Enter your name"
-                        className="w-full p-3 rounded bg-secondaryBackground text-text outline-none"
+                        id="nombre"
+                        name="nombre"
+                        value={formulario.nombre}
+                        onChange={manejarCambio}
+                        placeholder="Escribe tu nombre"
+                        className="w-full p-3 rounded bg-secondaryBackground text-black placeholder-gray-400 outline-none"
                         required
                     />
                 </div>
                 <div>
-                    <label htmlFor="email" className="block text-sm font-semibold mb-2">
-                        Email
+                    <label htmlFor="correo" className="block text-sm font-semibold mb-2">
+                        Correo Electrónico
                     </label>
                     <input
                         type="email"
-                        id="email"
-                        name="email"
-                        value={form.email}
-                        onChange={handleChange}
-                        placeholder="Enter your email"
-                        className="w-full p-3 rounded bg-secondaryBackground text-text outline-none"
+                        id="correo"
+                        name="correo"
+                        value={formulario.correo}
+                        onChange={manejarCambio}
+                        placeholder="Escribe tu correo"
+                        className="w-full p-3 rounded bg-secondaryBackground text-black placeholder-gray-400 outline-none"
                         required
                     />
                 </div>
                 <div>
-                    <label htmlFor="message" className="block text-sm font-semibold mb-2">
-                        Message
+                    <label htmlFor="mensaje" className="block text-sm font-semibold mb-2">
+                        Mensaje
                     </label>
                     <textarea
-                        id="message"
-                        name="message"
-                        value={form.message}
-                        onChange={handleChange}
-                        placeholder="Type your message"
-                        className="w-full p-3 rounded bg-secondaryBackground text-text outline-none"
+                        id="mensaje"
+                        name="mensaje"
+                        value={formulario.mensaje}
+                        onChange={manejarCambio}
+                        placeholder="Escribe tu mensaje"
+                        className="w-full p-3 rounded bg-secondaryBackground text-black placeholder-gray-400 outline-none"
                         rows="5"
                         required
                     ></textarea>
                 </div>
                 <button
                     type="submit"
-                    className="w-full bg-highlight text-text py-3 rounded font-semibold hover:bg-secondary transition"
+                    className="w-full bg-highlight text-text py-3 rounded font-semibold hover:bg-control transition"
                 >
-                    Submit →
+                    Enviar →
                 </button>
-                {isSent && (
+                {enviado && (
                     <p className="text-center text-green-500 mt-4">
-                        Thank you! Your message has been sent.
+                        ¡Gracias! Tu mensaje ha sido enviado con éxito.
                     </p>
                 )}
             </form>

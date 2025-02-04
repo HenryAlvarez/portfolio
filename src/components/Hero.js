@@ -4,38 +4,43 @@ import profileImage from "../assets/profile2.jpg.png";
 export default function Hero() {
   return (
     <section
-      id="home"
-      className="min-h-screen bg-background flex flex-col lg:flex-row items-center justify-center px-6 lg:px-20"
+      id="inicio"
+      className="relative min-h-screen bg-background flex flex-col-reverse lg:flex-row items-center justify-center px-6 lg:px-20"
     >
+
+      {/* Figuras decorativas */}
+      <div className="absolute top-8 left-10 w-10 h-10 bg-control rounded-full"></div>
+      <div className="absolute top-20 right-10 w-10 h-10 bg-highlight rotate-45"></div>
+      {/* <div className="absolute bottom-50 left-50 w-8 h-8 bg-highlight rotate-45"></div> */}
+
       {/* Texto */}
-      <div className="flex-1 text-center lg:text-left">
+      <div className="flex-1 text-center lg:text-left flex flex-col justify-center items-center lg:items-start">
         <h1 className="text-4xl lg:text-6xl font-bold text-text leading-tight">
-          Hi, I'm <span className="text-highlight">Front End</span> Expert Developer.
+          Hola, <span className="text-highlight texto-gradiente">soy Henry</span>, Desarrollador Web.
         </h1>
         <p className="text-secondary mt-4 text-lg lg:text-xl">
-          I am Web developer. I can provide clean code and pixel-perfect design.
+          Desarrollador Web con más de seis años de experiencia en la creación de interfaces dinámicas y funcionales.
+          Especialista en transformar conceptos en soluciones efectivas, optimizando la experiencia del usuario.
         </p>
         <a
-          href="#portfolio"
-          className="inline-block mt-6 px-6 py-3 bg-highlight text-text font-semibold rounded-lg hover:bg-secondary transition"
+          href="#portafolio"
+          className="inline-block mt-6 px-6 py-3 bg-highlight text-text font-semibold rounded-lg hover:bg-control transition"
         >
-          My Projects →
+          Ver Portafolio →
         </a>
       </div>
 
       {/* Imagen */}
-      <div className="flex-1 mt-10 lg:mt-0 relative">
-        <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden mx-auto lg:mx-0">
+      <div className="flex-1 flex justify-center lg:justify-center items-center h-full">
+        <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden flex items-center justify-center">
           <Image
             src={profileImage}
-            alt="Profile"
+            alt="Perfil"
             className="w-full h-full object-cover"
           />
         </div>
-        {/* Elementos decorativos */}
-        <div className="absolute -top-4 -right-6 w-10 h-10 bg-highlight rounded-full hidden lg:block"></div>
-        <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-secondary rotate-45 hidden lg:block"></div>
       </div>
+
     </section>
   );
 }

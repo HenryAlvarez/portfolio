@@ -1,94 +1,95 @@
 export default function Resume() {
-    const education = [
-      {
-        year: "2014 - 2016",
-        title: "Oxford University",
-        description:
-          "I use animation as a third dimension by which to simplify experiences and guiding.",
-      },
-      {
-        year: "2010 - 2014",
-        title: "Higher School Graduation",
-        description:
-          "I use animation as a third dimension by which to simplify experiences and guiding.",
-      },
-    ];
-  
-    const experience = [
-      {
-        year: "2023 - Now",
-        title: "Web Designer - Envato",
-        description:
-          "I use animation as a third dimension by which to simplify experiences and guiding.",
-      },
-      {
-        year: "2015 - 2023",
-        title: "Developer - Zhinc Studio",
-        description:
-          "I use animation as a third dimension by which to simplify experiences and guiding.",
-      },
-    ];
-  
-    return (
-      <section
-        id="resume"
-        className="min-h-screen bg-secondaryBackground text-text flex flex-col items-center justify-center px-6 lg:px-20 py-16"
-      >
-        {/* Encabezado */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold">
-            My <span className="text-highlight">CV Resume</span>
-          </h2>
-          <p className="text-secondary mt-4 lg:text-lg">
-            My career journey from education to professional experience.
-          </p>
-        </div>
-  
-        {/* Contenido */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
-          {/* Educación */}
-          <div>
-            <h3 className="text-xl font-bold mb-6">Education</h3>
-            <div className="space-y-8">
-              {education.map((item, index) => (
-                <div
-                  key={index}
-                  className="relative pl-8 pb-6 border-l border-secondary"
-                >
-                  <div className="absolute -left-4 top-0 bg-highlight w-8 h-8 rounded-full flex items-center justify-center">
-                    <span className="text-sm font-semibold text-background">
-                      {item.year}
-                    </span>
-                  </div>
-                  <h4 className="text-lg font-bold">{item.title}</h4>
-                  <p className="text-secondary mt-2">{item.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-  
-          {/* Experiencia */}
-          <div>
-            <h3 className="text-xl font-bold mb-6">Experience</h3>
-            <div className="space-y-8">
-              {experience.map((item, index) => (
-                <div
-                  key={index}
-                  className="relative pl-8 pb-6 border-l border-secondary"
-                >
-                  <div className="absolute -left-4 top-0 bg-highlight w-8 h-8 rounded-full flex items-center justify-center">
-                    <span className="text-sm font-semibold text-background">
-                      {item.year}
-                    </span>
-                  </div>
-                  <h4 className="text-lg font-bold">{item.title}</h4>
-                  <p className="text-secondary mt-2">{item.description}</p>
-                </div>
-              ))}
-            </div>
+  const educacion = [
+    {
+      titulo: "Ingeniería en Sistemas (Pensum Cerrado)",
+      institucion: "Universidad Mariano Gálvez",
+      fecha: "2018 - 2024",
+    },
+    {
+      titulo: "Bachiller Industrial y Perito en Informática",
+      institucion: "Colegio Simeón Cañas",
+      fecha: "2014 - 2016",
+    },
+    {
+      titulo: "Cursos en Línea",
+      institucion: "Plataformas educativas como Udemy, Platzi, etc.",
+      fecha: "Aprendizaje Constante",
+    },
+  ];
+
+  const experiencia = [
+    {
+      titulo: "Líder de Desarrollo Web",
+      empresa: "Empresa actual",
+      fecha: "2023 - Presente",
+      descripcion: [
+        "Liderazgo en el desarrollo de aplicaciones web utilizando React, Redux y consumo de APIs.",
+        "Creación de dashboards interactivos para la gestión de datos.",
+        "Implementación de asistentes basados en IA con OpenAI para mejorar la experiencia del usuario.",
+      ],
+    },
+    {
+      titulo: "Desarrollador Frontend",
+      empresa: "Empresa anterior",
+      fecha: "Mar 2020 - Jul 2023",
+      descripcion: [
+        "Desarrollo de interfaces de usuario responsivas con React, Bootstrap y Sass.",
+        "Optimización del rendimiento y SEO de aplicaciones web.",
+        "Consumo e integración de APIs RESTful.",
+      ],
+    },
+  ];
+
+  return (
+    <section
+      id="resume"
+      className="min-h-screen bg-secondaryBackground text-text flex flex-col items-center justify-center px-6 lg:px-20 py-16"
+    >
+      {/* Encabezado */}
+      <div className="text-center mb-12">
+        <h2 className="text-3xl lg:text-4xl font-bold">
+          Mi <span className="text-highlight texto-gradiente">Currículum</span>
+        </h2>
+        <p className="text-secondary mt-4 lg:text-lg">
+          Un resumen de mi formación académica y experiencia profesional.
+        </p>
+      </div>
+
+      {/* Contenido */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
+        {/* Educación */}
+        <div>
+          <h3 className="text-xl font-bold mb-6 text-highlight">Educación</h3>
+          <div className="space-y-8">
+            {educacion.map((item, index) => (
+              <div key={index} className="relative pb-6 border-l border-secondary pl-6">
+                <h4 className="text-lg font-bold ">{item.titulo}</h4>
+                <p className="text-sm text-secondary">{item.fecha}</p>
+                <p className="text-secondary">{item.institucion}</p>
+              </div>
+            ))}
           </div>
         </div>
-      </section>
-    );
-  }
-  
+
+        {/* Experiencia */}
+        <div>
+          <h3 className="text-xl font-bold mb-6 text-highlight">Experiencia</h3>
+          <div className="space-y-8">
+            {experiencia.map((item, index) => (
+              <div key={index} className="relative pb-6 border-l border-secondary pl-6">
+                <h4 className="text-lg font-bold">{item.titulo}</h4>
+                <p className="text-sm text-secondary">{item.fecha}</p>
+                <p className="text-secondary">{item.empresa}</p>
+                <ul className="list-disc pl-5 mt-2">
+                  {item.descripcion.map((desc, i) => (
+                    <li key={i} className="text-secondary">{desc}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

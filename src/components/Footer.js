@@ -1,91 +1,65 @@
 export default function Footer() {
-    return (
-      <footer className="bg-highlight text-text py-12">
-        <div className="container mx-auto px-6 lg:px-20">
-          {/* Contenedor de columnas */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* About Me */}
-            <div>
-              <h3 className="text-lg font-bold mb-4">About Me</h3>
-              <p className="text-secondary mb-4">
-                Lorem ipsum dolor sit amet consectetur. Neque aliquam nulla fusce
-                hendrerit nec lorem viverra.
-              </p>
-              <div className="flex space-x-4">
-                <a
-                  href="#"
-                  className="text-text hover:text-secondary transition"
-                  aria-label="Instagram"
-                >
-                  <i className="fab fa-instagram"></i>
-                </a>
-                <a
-                  href="#"
-                  className="text-text hover:text-secondary transition"
-                  aria-label="Twitter"
-                >
-                  <i className="fab fa-twitter"></i>
-                </a>
-                <a
-                  href="#"
-                  className="text-text hover:text-secondary transition"
-                  aria-label="WhatsApp"
-                >
-                  <i className="fab fa-whatsapp"></i>
-                </a>
-                <a
-                  href="#"
-                  className="text-text hover:text-secondary transition"
-                  aria-label="YouTube"
-                >
-                  <i className="fab fa-youtube"></i>
-                </a>
-              </div>
-            </div>
-  
-            {/* Services */}
-            <div>
-              <h3 className="text-lg font-bold mb-4">Services</h3>
-              <ul className="space-y-2">
-                <li>Web Development</li>
-                <li>App Development</li>
-                <li>UI/UX Design</li>
-                <li>Consulting</li>
-              </ul>
-            </div>
-  
-            {/* Support */}
-            <div>
-              <h3 className="text-lg font-bold mb-4">Support</h3>
-              <ul className="space-y-2">
-                <li>About Me</li>
-                <li>Terms & Conditions</li>
-                <li>Forums</li>
-                <li>Privacy Policy</li>
-              </ul>
-            </div>
-  
-            {/* Contact Us */}
-            <div>
-              <h3 className="text-lg font-bold mb-4">Contact Us</h3>
-              <ul className="space-y-4">
-                <li>
-                  <i className="fas fa-map-marker-alt mr-2"></i>
-                  520 Queenberry Street, Embilipitiya 75200, Sri Lanka
-                </li>
-                <li>
-                  <i className="fas fa-phone mr-2"></i>
-                  +94 712 345 678
-                </li>
-                <li>
-                  <i className="fas fa-envelope mr-2"></i>
-                  support@james.com
-                </li>
-              </ul>
-            </div>
-          </div>
+  return (
+    <footer className="bg-highlight text-text py-10 text-center">
+      <div className="container mx-auto px-6 lg:px-20">
+        {/* Información de Contacto (Alineado en Vertical en Móvil) */}
+        <div className="mb-6 flex flex-col items-center space-y-2">
+          <p className="text-lg font-semibold">Chimaltenango, Guatemala</p>
+          <p className="text-lg flex items-center">
+            <i className="fas fa-phone mr-2"></i> +502 30775696
+          </p>
+          <p className="text-lg flex items-center">
+            <i className="fas fa-envelope mr-2"></i>
+            <a href="mailto:henry.gabriel.alvarez@gmail.com" className="hover:text-secondary">
+              henry.gabriel.alvarez@gmail.com
+            </a>
+          </p>
         </div>
-      </footer>
-    );
-  }
-  
+
+        {/* Redes Sociales (Vertical en Móvil, Horizontal en Desktop) */}
+        <div className="flex flex-col md:flex-row justify-center items-center md:space-x-6 space-y-4 md:space-y-0">
+          <a
+            href="https://www.linkedin.com/in/henrry-alvarez/"
+            className="flex items-center space-x-2 hover:text-secondary transition"
+            target="_blank" rel="noopener noreferrer"
+          >
+            <i className="fab fa-linkedin text-xl"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a
+            href="https://github.com/HenryAlvarez/"
+            className="flex items-center space-x-2 hover:text-secondary transition"
+            target="_blank" rel="noopener noreferrer"
+          >
+            <i className="fab fa-github text-xl"></i>
+            <span>GitHub</span>
+          </a>
+          <a
+            href="https://www.instagram.com/henry_alv_/"
+            className="flex items-center space-x-2 hover:text-secondary transition"
+            target="_blank" rel="noopener noreferrer"
+          >
+            <i className="fab fa-instagram text-xl"></i>
+            <span>Instagram</span>
+          </a>
+          <a
+            href="https://www.facebook.com/henry.sunuc"
+            className="flex items-center space-x-2 hover:text-secondary transition"
+            target="_blank" rel="noopener noreferrer"
+          >
+            <i className="fab fa-facebook text-xl"></i>
+            <span>Facebook</span>
+          </a>
+          <a
+            href="https://www.tiktok.com/@alvarezgt_"
+            className="flex items-center space-x-2 hover:text-secondary transition"
+            target="_blank" rel="noopener noreferrer"
+          >
+            <i className="fab fa-tiktok text-xl"></i>
+            <span>TikTok</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+  );
+}

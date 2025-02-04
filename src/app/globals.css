@@ -4,9 +4,11 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --tw-color-primary: #644C61;
+  --tw-color-secondary: #4A7B73;
+  --tw-color-highlight: #7C69EB;
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -20,3 +22,13 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+
+.texto-gradiente {
+  font-weight: bold; /* Peso del texto si lo necesitas */
+  background: linear-gradient(to right, var(--tw-color-highlight), var(--tw-color-primary));
+  -webkit-background-clip: text; /* Clip al texto */
+  -webkit-text-fill-color: transparent; /* Hace transparente el color del texto */
+}
+
