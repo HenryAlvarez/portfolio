@@ -8,17 +8,17 @@ export default function Services() {
       textoBoton: "Más información",
     },
     {
-      titulo: "Desarrollo de Aplicaciones",
-      subtitulo: "Aplicaciones Móviles",
+      titulo: "Diseño UX/UI y Prototipado",
+      subtitulo: "Transformando ideas en experiencias intuitivas",
       descripcion:
-        "Creación de aplicaciones móviles híbridas y nativas con tecnologías como React Native y Flutter, garantizando rendimiento y escalabilidad.",
+        "Diseño de interfaces atractivas con Figma y Adobe XD, asegurando usabilidad, accesibilidad y flujos de usuario optimizados para productos digitales.",
       textoBoton: "Más información",
     },
     {
-      titulo: "Optimización y SEO",
-      subtitulo: "Mejora de rendimiento",
+      titulo: "Desarrollo de Interfaces Responsivas",
+      subtitulo: "Experiencias fluidas en cualquier dispositivo",
       descripcion:
-        "Optimización del rendimiento, accesibilidad y SEO para asegurar que tu sitio web cargue rápidamente y tenga una mejor visibilidad en motores de búsqueda.",
+        "Implementación de layouts adaptativos y accesibles con React.js, Next.js y Tailwind CSS, asegurando compatibilidad y fluidez en cualquier dispositivo.",
       textoBoton: "Más información",
       destacado: true, // Para personalizar esta tarjeta
     },
@@ -52,7 +52,7 @@ export default function Services() {
             <h4 className="text-lg mt-2">{servicio.subtitulo}</h4>
             <p className="text-secondary mt-4">{servicio.descripcion}</p>
             <a
-              href="#"
+              href="#contacto"
               className={`inline-block mt-6 px-4 py-2 font-semibold rounded-lg ${
                 servicio.destacado
                   ? "bg-background text-highlight"

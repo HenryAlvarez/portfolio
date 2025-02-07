@@ -9,28 +9,31 @@ import "swiper/css/pagination";
 export default function Portfolio() {
     const proyectos = [
         {
-            titulo: "Sistema de Reservas Académicas",
+            titulo: "Plataforma Tecnológica de Turismo",
+            link: "https://travelisimo.com/",
             descripcion:
-                "Desarrollo de una plataforma web para la reserva de aulas y recursos educativos, utilizando React para el frontend y MySQL para la gestión de datos.",
-            imagen: "https://s3.us-south.cloud-object-storage.appdomain.cloud/bucket-travelisimo/2928f1c206794db596a5c078613184f0coworking laptops.jpg",
+                "Travelisimo es una plataforma innovadora diseñada para ofrecer a los viajeros una forma rápida y eficiente de encontrar y reservar hospedajes, transporte y experiencias turísticas.",
+            imagen: "https://s3.us-south.cloud-object-storage.appdomain.cloud/bucket-travelisimo/Macbook_Air_travelisimo_com_2_0313888922",
         },
         {
-            titulo: "E-Commerce con WebSockets",
+            titulo: "Plataforma para Afiliados y Proveedores",
+            link: "https://partners.travelisimo.com/",
             descripcion:
-                "Creación de una tienda en línea con React y Node.js, integrando WebSocket en Java para permitir actualizaciones en tiempo real en el carrito de compras.",
-            imagen: "https://s3.us-south.cloud-object-storage.appdomain.cloud/bucket-travelisimo/5_8931e87bab",
+                "Partners Travelisimo diseñada para gestionar proveedores y afiliados dentro del ecosistema turístico. Esta plataforma innovadora permite a negocios y emprendedores promocionar sus servicios.",
+            imagen: "https://s3.us-south.cloud-object-storage.appdomain.cloud/bucket-travelisimo/Macbook_Air_partners_travelisimo_com_1_245e84770d",
         },
         {
             titulo: "Dashboard para Gestión Empresarial",
             descripcion:
-                "Desarrollo de un panel de control interactivo con React y Redux, permitiendo a los usuarios visualizar estadísticas y gestionar datos de forma eficiente.",
-            imagen: "https://s3.us-south.cloud-object-storage.appdomain.cloud/bucket-travelisimo/2_18df4f09d6",
+                "Desarrollo de un panel de control interactivo con React y Redux, permitiendo a los administradores visualizar la disponibilidad y gestionar prodcutos y servicios de forma eficiente.",
+            imagen: "https://s3.us-south.cloud-object-storage.appdomain.cloud/bucket-travelisimo/Macbook_Air_office_travelisimo_com_8b6ec1ca25",
         },
         {
-            titulo: "Plataforma de Aprendizaje Online",
+            titulo: "Plataforma de Alquileres Vacacionales",
+            link: "https://antigua-rentals.com/",
             descripcion:
-                "Diseño e implementación de una plataforma educativa en línea con Next.js y Node.js, enfocada en cursos interactivos y seguimiento del progreso del usuario.",
-            imagen: "https://s3.us-south.cloud-object-storage.appdomain.cloud/bucket-travelisimo/2928f1c206794db596a5c078613184f0coworking laptops.jpg",
+                "Antigua Rentals es la plataforma ideal para encontrar y reservar alojamientos únicos en Guatemala. Desarrollado con React.js, integrando APIs y optimizando rendimiento y UX",
+            imagen: "https://s3.us-south.cloud-object-storage.appdomain.cloud/bucket-travelisimo/Macbook_Air_antigua_rentals_com_145ea4b252",
         },
     ];
 
@@ -68,25 +71,31 @@ export default function Portfolio() {
             >
                 {proyectos.map((proyecto, index) => (
                     <SwiperSlide key={index}>
-                        <div className="bg-dark rounded-lg shadow-lg overflow-hidden transition hover:scale-105">
-                            <img
-                                src={proyecto.imagen}
-                                alt={proyecto.titulo}
-                                className="w-full h-48 object-cover"
-                            />
-                            <div className="p-4">
-                                <h3 className="text-xl font-bold">{proyecto.titulo}</h3>
-                                <p className="text-secondary mt-2">{proyecto.descripcion}</p>
-                                <a
-                                    href="#"
-                                    className="inline-block mt-4 text-highlight font-semibold"
-                                >
-                                    Leer más →
-                                </a>
+                        <a
+                            href={proyecto.link || "#portafolio"}
+                            target={proyecto.link ? "_blank" : "_self"}
+                            rel="noopener noreferrer"
+                            className="block"
+                        >
+                            <div className="bg-dark rounded-lg shadow-lg overflow-hidden transition hover:scale-105 cursor-pointer">
+                                <img
+                                    src={proyecto.imagen}
+                                    alt={proyecto.titulo}
+                                    className="w-full h-48 object-cover"
+                                />
+                                <div className="p-4">
+                                    <h3 className="text-xl font-bold">{proyecto.titulo}</h3>
+                                    <p className="text-secondary mt-2">{proyecto.descripcion}</p>
+
+                                    <span className="inline-block mt-3 text-highlight font-semibold">
+                                        Ver →
+                                    </span>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </SwiperSlide>
                 ))}
+
             </Swiper>
         </section>
     );
