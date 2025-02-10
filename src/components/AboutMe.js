@@ -12,13 +12,13 @@ export default function AboutMe() {
     "HTML", "CSS", "JavaScript", "React", "Redux", "Next.js", "Bootstrap", "SASS", "Ant Design", "Tailwind", "UX", "UI",
 
     // Backend y Bases de Datos
-    "Node.js", "Express.js", "APIs RESTful", "SQL", "MySQL",
+    "Node.js", "Express.js", "APIs RESTful", "SQL", "MySQL", "Mongo db",
 
     // Inteligencia Artificial e Integraciones
-    "OpenAI API", "Dialoflow", "NLP", 
+    "OpenAI API", "Dialoflow", "NLP",
 
     // Herramientas y Diseño
-    "Adobe XD", "Figma", "Git", "GitHub"
+    "Adobe XD", "Figma", "Git", "GitHub", "Npm", "Nvm"
 ];
 
 

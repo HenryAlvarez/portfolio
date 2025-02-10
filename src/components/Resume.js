@@ -11,8 +11,8 @@ export default function Resume() {
         fecha: "2014 - 2016",
     },
     {
-        titulo: "Search Expert",
-        institucion: "Programa Valentina",
+        titulo: "Search Expert & Data Science",
+        institucion: "Programa Valentina de FUNSEPA",
         fecha: "2018",
     },
     {
