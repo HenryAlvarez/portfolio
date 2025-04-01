@@ -8,18 +8,26 @@ export default function AboutMe() {
   const [mostrarMasHabilidades, setMostrarMasHabilidades] = useState(false);
 
   const habilidades = [
-    // Desarrollo Frontend
-    "HTML", "CSS", "JavaScript", "React", "Redux", "Next.js", "Bootstrap", "SASS", "Ant Design", "Tailwind", "UX", "UI",
+    // Front-End
+    "HTML5", "CSS3", "Sass", "JavaScript", "React.js", "Redux", "Next.js",
+    "Bootstrap", "Tailwind", "Ant Design",
 
-    // Backend y Bases de Datos
-    "Node.js", "Express.js", "APIs RESTful", "SQL", "MySQL", "Mongo db",
+    // Back-End
+    "Node.js", "Express.js", "C#", ".NET", "Npm", "Nvm", "OpenAI",
 
-    // Inteligencia Artificial e Integraciones
-    "OpenAI API", "Dialoflow", "NLP",
+    // Bases de Datos
+    "SQL Server", "MongoDB",
 
-    // Herramientas y Diseño
-    "Adobe XD", "Figma", "Git", "GitHub", "Npm", "Nvm"
-];
+    // UX/UI
+    "Adobe XD", "Figma",
+
+    // DevOps y Nube
+    "Google Cloud", "Microsoft Azure", "Vercel",
+
+    // Herramientas
+    "Visual Studio", "VS Code", "Git", "GitHub"
+  ];
+
 
 
   return (
@@ -44,8 +52,8 @@ export default function AboutMe() {
           Sobre Mí <span className="text-highlight texto-gradiente">Henry Alvarez</span>
         </h2>
         <p className="text-secondary text-lg lg:text-xl mb-6">
-          Desarrollador Web con experiencia en todas las etapas del ciclo de desarrollo. 
-          Especialista en React, Next.js, Node.js y bases de datos. 
+          Desarrollador Web con experiencia en todas las etapas del ciclo de desarrollo.
+          Especialista en React, Next.js, Node.js y bases de datos.
           Comprometido con la creación de experiencias digitales innovadoras y eficientes.
         </p>
 

@@ -1,70 +1,70 @@
 export default function Resume() {
   const educacion = [
     {
-        titulo: "Ingeniería en Sistemas (Pensum Cerrado)",
-        institucion: "Universidad Mariano Gálvez",
-        fecha: "2018 - 2024",
+      titulo: "Ingeniería en Sistemas (Pensum Cerrado)",
+      institucion: "Universidad Mariano Gálvez",
+      fecha: "2018 - 2024",
     },
     {
-        titulo: "Bachiller Industrial y Perito en Informática",
-        institucion: "Colegio Simeón Cañas",
-        fecha: "2014 - 2016",
+      titulo: "Bachiller Industrial y Perito en Informática",
+      institucion: "Colegio Simeón Cañas",
+      fecha: "2014 - 2016",
     },
     {
-        titulo: "Search Expert & Data Science",
-        institucion: "Programa Valentina de FUNSEPA",
-        fecha: "2018",
+      titulo: "Search Expert & Data Science",
+      institucion: "Programa Valentina de FUNSEPA",
+      fecha: "2018",
     },
     {
-        titulo: "Cursos en Línea",
-        institucion: "Plataformas educativas como Udemy, Platzi, etc.",
-        fecha: "Aprendizaje Constante",
+      titulo: "Cursos en Línea",
+      institucion: "Plataformas educativas como Udemy, Platzi, etc.",
+      fecha: "Aprendizaje Constante",
     },
-];
+  ];
 
 
   const experiencia = [
     {
-        titulo: "Líder de Desarrollo Web",
-        empresa: "Empresa actual",
-        fecha: "2023 - Presente",
-        descripcion: [
-            "Liderazgo en el desarrollo de aplicaciones web utilizando React, Redux y consumo de APIs.",
-            "Creación de dashboards interactivos para la gestión de datos.",
-            "Implementación de asistentes basados en IA con OpenAI para mejorar la experiencia del usuario.",
-        ],
+      titulo: "Desarrollador Web",
+      empresa: "Travelisimo",
+      fecha: "2022 - 2025",
+      descripcion: [
+        "Liderazgo en el desarrollo de aplicaciones web utilizando React, Redux y consumo de APIs.",
+        "Creación de dashboards interactivos para la gestión de datos.",
+        "Implementación de asistentes basados en IA con OpenAI para mejorar la experiencia del usuario.",
+      ],
     },
     {
-        titulo: "Desarrollador Frontend",
-        empresa: "Empresa anterior",
-        fecha: "Mar 2020 - Jul 2023",
-        descripcion: [
-            "Desarrollo de interfaces de usuario responsivas con React, Bootstrap y Sass.",
-            "Optimización del rendimiento y SEO de aplicaciones web.",
-            "Consumo e integración de APIs RESTful.",
-        ],
+      titulo: "Diseñador UI/UX y Prototipado",
+      empresa: "ViaGuate",
+      fecha: "2021 - 2022",
+      descripcion: [
+        "Creación de prototipos interactivos en Figma y Adobe XD.",
+        "Definición de flujos de usuario y diseño de experiencia digital.",
+        "Realización de pruebas de usabilidad para optimizar la interacción del usuario.",
+      ],
     },
     {
-        titulo: "Diseñador UI/UX y Prototipado",
-        empresa: "Freelance",
-        fecha: "2021 - 2022",
-        descripcion: [
-            "Creación de prototipos interactivos en Figma y Adobe XD.",
-            "Definición de flujos de usuario y diseño de experiencia digital.",
-            "Realización de pruebas de usabilidad para optimizar la interacción del usuario.",
-        ],
+      titulo: "Desarrollador Frontend",
+      empresa: "Antigua Rentals",
+      fecha: "Mar 2020 - Jul 2022",
+      descripcion: [
+        "Desarrollo de interfaces de usuario responsivas con React, Bootstrap y Sass.",
+        "Optimización del rendimiento y SEO de aplicaciones web.",
+        "Consumo e integración de APIs RESTful.",
+      ],
     },
     {
-        titulo: "Maquetador Web (HTML & CSS)",
-        empresa: "Freelance",
-        fecha: "2019 - 2020",
-        descripcion: [
-            "Desarrollo de interfaces web con HTML, CSS y metodologías como BEM.",
-            "Implementación de layouts responsivos con Flexbox y Grid.",
-            "Optimización de código para mejorar rendimiento y accesibilidad.",
-        ],
+      titulo: "Maquetador Web (HTML & CSS)",
+      empresa: "Colab",
+      fecha: "2019 - 2020",
+      descripcion: [
+        "Desarrollo de interfaces web con HTML, CSS.",
+        "Implementación de layouts responsivos con Flexbox y Grid.",
+        "Optimización de código para mejorar rendimiento y accesibilidad.",
+      ],
     },
-];
+  ];
 
 
   return (
