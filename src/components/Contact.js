@@ -44,7 +44,7 @@ export default function Contact() {
 
     return (
         <section
-            id="contacto"
+            id="contact"
             className="relative min-h-screen bg-background text-text flex flex-col items-center justify-center px-6 lg:px-20 py-16 overflow-hidden"
         >
             {/* Figuras decorativas */}

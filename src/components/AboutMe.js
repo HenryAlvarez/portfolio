@@ -32,7 +32,7 @@ export default function AboutMe() {
 
   return (
     <section
-      id="sobre-mi"
+      id="about"
       className="min-h-screen bg-[#252728] flex flex-col lg:flex-row items-center justify-center px-6 lg:px-20 gap-10 py-16"
     >
       {/* Imagen */}

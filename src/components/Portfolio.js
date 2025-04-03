@@ -39,7 +39,7 @@ export default function Portfolio() {
 
     return (
         <section
-            id="portafolio"
+            id="portfolio"
             className="min-h-screen bg-background text-text flex flex-col items-center justify-center px-6 lg:px-20 py-16"
         >
             {/* Encabezado */}

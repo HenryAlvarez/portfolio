@@ -4,7 +4,7 @@ import profileImage from "../assets/profile2.jpg.png";
 export default function Hero() {
   return (
     <section
-      id="inicio"
+      id="home"
       className="relative min-h-screen bg-background flex flex-col-reverse lg:flex-row items-center justify-center px-6 lg:px-20"
     >
 
