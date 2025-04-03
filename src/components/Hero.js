@@ -15,12 +15,11 @@ export default function Hero() {
 
       {/* Texto */}
       <div className="flex-1 text-center lg:text-left flex flex-col justify-center items-center lg:items-start">
-        <h1 className="text-4xl lg:text-6xl font-bold text-text leading-tight">
-          Hola, <span className="text-highlight texto-gradiente">soy Henry</span>, Desarrollador Web.
+        <h1 className="text-4xl lg:text-5xl font-bold text-text leading-tight">
+          Hola, <span className="text-highlight texto-gradiente">soy Henry</span>, Desarrollador de Software
         </h1>
         <p className="text-secondary mt-4 text-lg lg:text-xl">
-          Desarrollador Web con más de seis años de experiencia en la creación de interfaces dinámicas y funcionales.
-          Especialista en transformar conceptos en soluciones efectivas, optimizando la experiencia del usuario.
+        Soy un Desarrollador Web con más de seis años de experiencia creando interfaces dinámicas y funcionales. Me especializo en transformar ideas en soluciones eficientes, optimizando la experiencia del usuario con tecnología moderna.
         </p>
         <a
           href="#portafolio"
