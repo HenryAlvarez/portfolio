@@ -42,22 +42,22 @@ export default function Footer() {
             <i className="fab fa-instagram text-xl"></i>
             <span>Instagram</span>
           </a>
-          <a
+          {/* <a
             href="https://www.facebook.com/henry.sunuc"
             className="flex items-center space-x-2 hover:text-secondary transition"
             target="_blank" rel="noopener noreferrer"
           >
             <i className="fab fa-facebook text-xl"></i>
             <span>Facebook</span>
-          </a>
-          <a
+          </a> */}
+          {/* <a
             href="https://www.tiktok.com/@alvarezgt_"
             className="flex items-center space-x-2 hover:text-secondary transition"
             target="_blank" rel="noopener noreferrer"
           >
             <i className="fab fa-tiktok text-xl"></i>
             <span>TikTok</span>
-          </a>
+          </a> */}
         </div>
       </div>
     </footer>
