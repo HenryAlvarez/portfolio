@@ -22,7 +22,7 @@ export default function Hero() {
         Soy un Desarrollador Web con más de seis años de experiencia creando interfaces dinámicas y funcionales. Me especializo en transformar ideas en soluciones eficientes, optimizando la experiencia del usuario con tecnología moderna.
         </p>
         <a
-          href="#portafolio"
+          href="#portfolio"
           className="inline-block mt-6 px-6 py-3 bg-highlight text-text font-semibold rounded-lg hover:bg-control transition"
         >
           Ver Portafolio →
